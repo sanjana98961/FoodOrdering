@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+.banner-slider{
+  height: 100vh;
+}
+
+.banner-slider .item {
+  height: 100vh;
+  background-size: cover;
+}
+
+.banner-slider .item h2 {
+   font-family: "Lilita One", sans-serif;
+   font-size: 100px;
+   font-weight: 850;
+}
+
+.banner-slider .item h3 {
+   font-family: "Lilita One", sans-serif;
+   font-size: 30px;
+   font-weight: bold;
+}
