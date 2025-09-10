@@ -3,7 +3,12 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+font-family: "Roboto", sans-serif;
+}
 
+.text-y{ color: #f7be27 !important;}
 .banner-slider{
   height: 100vh;
 }
@@ -11,6 +16,19 @@
 .banner-slider .item {
   height: 100vh;
   background-size: cover;
+  overflow: hidden  ;
+}
+
+.banner-slider .item .info.mr-auto{
+  position: relative;
+  left: -100%;
+  opacity: 0;
+}
+
+.banner-slider .item .info.ml-auto{
+  position: relative;
+  right: -100%;
+  opacity: 0;
 }
 
 .banner-slider .item h2 {
@@ -23,4 +41,72 @@
    font-family: "Lilita One", sans-serif;
    font-size: 30px;
    font-weight: bold;
+}
+
+.banner-slider .swiper-slide-active .info.mr-auto {
+  left: 0px;
+  opacity: 1;
+}
+
+.banner-slider .swiper-slide-active .info.ml-auto {
+  right: 0px;
+  opacity: 1;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 42px !important;              
+  height: 32px;
+  font-size: 18px !important;        
+  background: rgba(238, 232, 232, 0.932); 
+  border-radius: 50%;    
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 18px !important;          
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: #0f0d0a;
+  color: #fff;
+}
+
+.banner-slider .swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+
+.container {
+  max-width: 1280px !important;
+  width: 1280px !important;
+}
+
+header .logo{
+  width: 200px;
+}
+header .logo img{
+  width: 70px;
+  /* height: auto; */
+}
+
+header nav ul li a{
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+header nav ul li a:hover{
+  text-decoration: none;
+  color: #f7be27;
+}
+
+header .mobile{
+  font-weight: 900;
+  font-size: 25px;
 }

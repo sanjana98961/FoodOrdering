@@ -2,6 +2,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
 import ThemeProvider from "../context/ThemeProvider";
+import Header from "@/components/Header";
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
 //   subsets: ["latin"],
@@ -24,7 +25,7 @@ export default function RootLayout({ children }) {
       // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider>
-
+        <Header/>
         {children}
         </ThemeProvider>
       </body>
