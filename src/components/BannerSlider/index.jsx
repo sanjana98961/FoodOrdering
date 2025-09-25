@@ -5,8 +5,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "swiper/css/effect-fade";
 
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 
 export const BannerSlider = () => {
   return (
@@ -16,7 +17,8 @@ export const BannerSlider = () => {
         pagination={{ clickable: true }}
         autoplay={{ delay: 2000, disableOnInteraction: false }}
         loop={true}
-        modules={[Navigation, Pagination, Autoplay]}
+        effect="fade"
+        modules={[Navigation, Pagination, Autoplay,EffectFade]}
         className="banner-slider w-[100%]"
       >
         <SwiperSlide>

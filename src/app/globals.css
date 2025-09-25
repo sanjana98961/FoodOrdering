@@ -4,11 +4,42 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+.btn-border{
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.4);
+  padding: 6px 25px;
+}
+
+.btn-white{
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.7) !important;
+  background: white !important;
+  padding: 6px 25px !important;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  border-radius: 30px !important;
+}
 body {
 font-family: "Roboto", sans-serif;
 }
 
 .text-y{ color: #f7be27 !important;}
+.bg-y{ background-color: #f7be27 !important;}
+.btn-y{background-color: #f7be27 !important; color: #000 !important; font-weight: 600 !important; border-radius: 4px !important;}
+.btn-y:hover{ background-color: #e9b320 !important;}
+.btn-lg{font-size:16px !important; font-weight: 600 !important; padding: 10px 20px !important;}
+.no-radius{border-radius: 0px !important;}
+.btn-red{background-color: #e3000e !important; border: 1px solid #e3000e !important; color: #fff !important;}
+.btn-red:hover{background-color: transparent !important;color: #e3000e !important;}
+.bg-brown{background-color: #642f21;}
+.text-brown{color: #642f21 !important;}
+.text-red{color: #e3000e;}
+p{
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 16px;
+  font-weight: 400;
+}
 .banner-slider{
   height: 100vh;
 }
@@ -35,12 +66,14 @@ font-family: "Roboto", sans-serif;
    font-family: "Lilita One", sans-serif;
    font-size: 100px;
    font-weight: 850;
+   text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
 }
 
 .banner-slider .item h3 {
    font-family: "Lilita One", sans-serif;
    font-size: 30px;
    font-weight: bold;
+   text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
 }
 
 .banner-slider .swiper-slide-active .info.mr-auto {
@@ -85,7 +118,11 @@ font-family: "Roboto", sans-serif;
   max-width: 1280px !important;
   width: 1280px !important;
 }
-
+header.scroll {
+  background: rgb(248, 242, 242);
+  padding: 5px 0px;
+  box-shadow: 0px 1px 5px #0000001a;
+}
 header .logo{
   width: 200px;
 }
@@ -101,7 +138,16 @@ header nav ul li a{
   font-size: 18px;
 }
 
+header.scroll nav ul li a{
+  color: #2c2c2c;
+}
+
 header nav ul li a:hover{
+  text-decoration: none;
+  color: #f7be27;
+}
+
+header.scroll nav ul li a:hover{
   text-decoration: none;
   color: #f7be27;
 }
@@ -110,3 +156,241 @@ header .mobile{
   font-weight: 900;
   font-size: 25px;
 }
+
+header .cartTab svg{
+  font-size: 30px;
+  color: white;
+}
+
+header.scroll .cartTab svg{
+  font-size: 30px;
+  color: #2c2c2c;
+}
+
+header .cartTab span{
+  position: absolute;
+  top: -1px;
+  right: -8px;
+  z-index: 100;
+  width: 20px;
+  height: 20px;
+  background: #e3000e;
+  color: #fff;
+}
+
+header .btn-border{
+  color: white;
+  border: 1px solid white;
+}
+
+.filterProducts .list-inline li{
+  margin: 0 45px !important;
+}
+.filterProducts .list-inline li img {
+  opacity: 0.4;
+}
+
+.filterProducts .list-inline li h6 {
+  color: #1b1b1b;
+}
+
+.filterProducts .list-inline li.active img {
+  opacity: 1;
+}
+.filterProducts .list-inline li.active h6 {
+  color: #e3000e;
+}
+.product_item_v1 .imgWrapper img {
+  width: 100% ;
+  height: auto ;
+  transition: all 0.3s;
+} 
+
+.productsList .product_item_v1 {
+  width: 22% !important;
+}
+
+.product_item_v1 .imgWrapper:hover img {
+  transform: scale(1.1);
+}
+
+.product_item_v1 .imgWrapper{
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+
+.product_item_v1 .imgWrapper .MuiCheckbox-root{
+  color: #e3000e;
+}
+
+.product_item_v1 .info h6{
+  font-size: 20px;
+  color: #642f21;
+}
+.product_item_v1 .info button{
+  padding: 7px 20px;
+  color: #642f21;
+  font-weight: 600;
+  align-items: center;
+  border: 1px solid #642f21;
+}
+
+.product_item_v1 .info button:hover {
+  background: #642f21;
+  color: white;
+}
+
+.product_item_v1 .info svg {
+  font-size: 20px;
+}
+
+.section2{
+  padding: 30px 0px;
+  background: url("../../public/images/burger-3.jpg") no-repeat bottom center;
+  background-size: contain;
+  height: 700px;
+}
+
+.section2 h2{
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 1.3em;
+  font-family: "Oswald", sans-serif;
+}
+
+.hd{
+  font-size: 45px !important;
+  font-weight: 800;
+}
+
+.productItemV2{
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.productItemV2 .imgWrapper {
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.productItemV2 .imgWrapper img{
+  width: 100%;
+  height: auto;
+  transition: all 0.3s;
+}
+
+.productItemV2 .imgWrapper:hover img{
+  transform: scale(1.1);
+}
+
+.wishlist{
+  color: #e3000e !important;
+}
+
+.productItemV2 .info h3{
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.productItemV2 .info p{
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.productItemV2 .info{overflow: hidden;}
+.productItemV2 .info .btn-y{font-size: 12px !important; font-weight: bold !important; position: absolute; bottom: -100%; right: 20px; opacity: 0; transition: all 0.3s;}
+.productItemV2 .info .btn-y svg{font-size: 20px;}
+.productItemV2:hover .btn-y{opacity: 1; bottom: 15px;}
+.bg_row{background-image: url("../../public/images/Banner.jpg"); background-repeat: no-repeat; background-attachment: fixed; width: 100%; height: 400px; background-size: cover;}
+.deliverySection{background: url("../../public/images/Call.jpg") no-repeat top center; background-size: cover; height: 500px; padding: 80px 0px;}
+.deliverySection h4{font-size: 35px; font-weight: 700;}
+.deliverySection h2{font-size: 60px; font-weight: 700;}
+footer{padding: 45px 0px;}
+footer ul li{margin: 0px 15px;}
+footer ul li a {color: #333333; font-weight: 600; transition: all 0.3s;}
+footer ul li a{text-decoration: none;}
+footer ul li a svg{font-size: 25px;}
+footer ul li a:hover{color: #fc9817;}
+.inner-banner {
+    width: 100%;
+    height: 450px;
+    margin: auto;
+    /* background: url(../../public/images/menu.jpg) no-repeat fixed top; */
+    background-size: cover !important;
+    position: relative;
+    overflow: hidden;
+  padding: 170px 0px;
+}
+
+.inner-banner .container-fluid,.inner-banner .container {
+    position: relative;
+    z-index: 1;
+	max-width:90%;
+}
+
+
+.inner-banner:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /* background: linear-gradient( -225deg, #831619 0%, #b92d32 48%, #831619 100%); */
+}
+
+.shape-bottom {
+    position: absolute;
+    top: auto;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.shape-bottom svg {
+    overflow: hidden;
+    width: 100%;
+    line-height: 0;
+    direction: ltr;
+}
+.inner-banner h1 {
+    font-size: 60px;
+    font-weight: 800;
+    position: relative;
+    z-index: 100;
+}
+
+.signInBox{background: #bdbbbb; padding: 35px !important; border-radius: 10px !important;}
+.form .or span.rounded-full{border: 1px solid rgb(196, 193, 193); }
+.form .or span.line{background: rgb(185, 184, 184);}
+.authBtn{padding: 10px 20px !important; background: #e9e9e9 !important; text-transform: capitalize !important; color: rgba(0, 0, 0, 0.6) !important; font-size: 18px !important; font-weight: 600;}
+
+.a{text-decoration: none; font-weight: 600; color: #36c;}
+.a:hover{text-decoration: none;}
+.qtyDrop{width: 200px;}
+.qtyDrop .action{min-width: 35px !important; height: 40px !important; border-radius: 100% !important; background: #ccc !important;}
+.qtyDrop .action svg{
+  color: rgba(0, 0, 0, .7);
+}
+.qtyDrop input{width: 50px !important; border: 1px solid rgba(0, 0, 0, .1); border-radius: 10px; height: 35px;outline: none !important; text-align: center;}
+.qtyDrop input:focus{border: 1px solid rgba(0, 0, 0, .2) !important;}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+.productDetailsSliderBig{overflow: hidden; border-radius: 10px;}
+.smlSlider .item{padding: 3px; border: 1px solid rgba(0, 0, 0, 0.1); overflow: hidder; border-radius: 5px; cursor: pointer;}
+.smlSlider .item.active{border: 1px solid red;}
+.tabs .itemTab{font-weight: 600 !important; color: rgba(0, 0, 0, .7) !important;}
+.tabs .itemTab.Mui-selected{color: #000 !important;}
+.css-1aquho2-MuiTabs-indicator{background-color: #e3000e !important;}
